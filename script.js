@@ -1,9 +1,10 @@
 // Please implement exercise logic here
 // Global Variables
-let seconds = 58;
-let minutes = 59;
-let hours = 1;
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
 const delayInMilliseconds = 1000;
+let startTime;
 
 
 // Create a div for layout of stopwatch
@@ -67,8 +68,9 @@ button2.innerHTML = 'Reset'
 button3.innerHTML = 'Lap'
 
 
-// timer function logic
-const timerStart = setInterval(() => {
+// Timer start logic and corresponding display UI
+const timerStart = () => {
+startTime = setInterval(() => {
     
     if (minutes == 59 && seconds == 59){
         hours += 1;
@@ -86,9 +88,25 @@ const timerStart = setInterval(() => {
     timerEl.innerHTML = `${hours} hours <br> ${minutes} minutes  <br> ${seconds} seconds`;
     }, delayInMilliseconds);
 
+};
+// Timer stop logic to pause TimerStart Function
+const timerStop = () => {
+    clearInterval(startTime);    
+    };
+    
+// Reset Timer to stop timer count and reset all counters
+const timerReset = () => {
+    clearInterval(startTime);   
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
+    timerEl.innerHTML = `${hours} hours <br> ${minutes} minutes  <br> ${seconds} seconds`;  
+    };
+    
 
-
-// button0.addEventListener('click', timerStart());
-
+// Add event listener to start and stop button   
+button0.addEventListener('click', timerStart);
+button1.addEventListener('click', timerStop);
+button2.addEventListener('click', timerReset);
 
 
