@@ -1,3 +1,51 @@
 body {
   background-color: pink;
 }
+
+#lapContainer {
+  float: left;
+  width: 25%;
+  height: 280px;
+  background-color: grey;
+}
+#timeContainer {
+  float: left;
+
+  width: 50%;
+  height: 280px;
+  background-color: silver;
+}
+#buttonContainer {
+  float: left;
+
+  width: 25%;
+  height: 280px;
+  background-color: cornflowerblue;
+}
+
+/* .displayContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100vh;
+  background-color: yellow;
+} */
+/* 
+.lapContainer {
+  flex: 0 0 100%;
+  background: red;
+}
+
+.buttonContainer {
+  background: blue;
+}
+
+.timerContainer {
+  background: green;
+}
+
+.timeContainer,
+.buttonContainer {
+  flex: 0 0 50%;
+  background: green;
+} */
