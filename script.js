@@ -1,8 +1,8 @@
 // Please implement exercise logic here
 // Global Variables
-let seconds = 50;
-let minutes = 0;
-let hours = 0;
+let seconds = 58;
+let minutes = 59;
+let hours = 1;
 const delayInMilliseconds = 1000;
 
 
@@ -70,7 +70,7 @@ button3.innerHTML = 'Lap'
 // timer function logic
 const timerStart = setInterval(() => {
     
-    if (minutes == 59){
+    if (minutes == 59 && seconds == 59){
         hours += 1;
         minutes = 0;
         seconds = 0;        
